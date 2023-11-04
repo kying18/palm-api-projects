@@ -15,7 +15,6 @@ async def scrape_reviews(url):
 
     await page.setViewport({"width": 800, "height": 3200})
     await page.goto(url)
-    await page.screenshot({'path': 'example.png'})
 
     await page.waitForSelector('.jftiEf')
     elements = await page.querySelectorAll('.jftiEf')
