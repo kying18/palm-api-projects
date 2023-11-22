@@ -60,7 +60,7 @@ if __name__ == "__main__":
         user_input = input("Which reviews do you want to summarize? Paste a link or click 'q' to exit.\n")
         if user_input == "q": break
         try:
-            reviews = asyncio.get_event_loop().run_until_complete(scrape_reviews(user_input))
+            reviews = asyncio.run(scrape_reviews(user_input))
             print(summarize(reviews, model))
 
         except:

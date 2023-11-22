@@ -61,7 +61,7 @@ model = models[0].name
 
 url = input("Enter a url: ")
 
-reviews = asyncio.get_event_loop().run_until_complete(scrape_reviews(url))
+reviews = asyncio.run(scrape_reviews(url))
 
 result = summarize(reviews, model)
 print(result)
